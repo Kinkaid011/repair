@@ -9,113 +9,126 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <header>
+    <div class="container header">
+      <h2>REPAIR / SELL EVALUATION SHEET</h2>
+      <img class="logo" src="./images/holdinglogo.png" alt="">
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #0056a9;">
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class=" nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class=" nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="#">DASHBOARD <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">WORKFLOW</a>
+          <a class="nav-item nav-link" href="#">ACCOUNT</a>
+          <a class="nav-item nav-link active" href="#">LOGOUT</a>
+        </div>
       </div>
     </div>
   </nav>
 
+
   <div class="container">
-    <div class="vehicle-info">
-      <div class="vin">
-        <input type="text" placeholder="V.I.N.#"> <button>CREATE FILE</button>
+    <div class="vehicle-wrapper">
+      <div class="vehicle-info">
+        <div class="vin">
+          <input type="text" placeholder="V.I.N.#"> <button>CREATE FILE</button>
+        </div>
+    
+        <div class="unit">
+          <label for="unit">UNIT#</label> 
+          <input id="unit" type="text">
+        </div>
+    
+        <div class="mileage">
+          <label for="mileage">MILEAGE#</label> 
+          <input id="mileage" type="text">
+        </div>
+    
+        <div class="location">
+          <label for="location">LOCATION</label> 
+          <select>
+            <option value="1"></option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+    
+        <div class="title-type">
+          <label for="title type">TITLE TYPE</label> 
+          <input id="title type" type="text">
+        </div>
       </div>
   
-      <div class="unit">
-        <label for="unit">UNIT#</label> 
-        <input id="unit" type="text">
-      </div>
+      <div class="vehicle-eval">
+        <div class="cuwa">
+          <label for="title type">C.U.W.A.</label> 
+          <input id="title type" type="text">
+        </div>
   
-      <div class="mileage">
-        <label for="mileage">MILEAGE#</label> 
-        <input id="mileage" type="text">
-      </div>
+        <div class="repair-cost">
+          <label for="title type">REPAIR COST</label> 
+          <input id="title type" type="text">
+        </div>
   
-      <div class="location">
-        <label for="location">LOCATION</label> 
-        <select>
-          <option value="1"></option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-  
-      <div class="title-type">
-        <label for="title type">TITLE TYPE</label> 
-        <input id="title type" type="text">
-      </div>
-    </div>
-
-    <div class="vehicle-eval">
-      <div class="cuwa">
-        <label for="title type">C.U.W.A.</label> 
-        <input id="title type" type="text">
-      </div>
-
-      <div class="repair-cost">
-        <label for="title type">REPAIR COST</label> 
-        <input id="title type" type="text">
-      </div>
-
-      <div class="delete-value">
-        <label for="title type">DELETE VALUE</label> 
-        <input id="title type" type="text">
+        <div class="delete-value">
+          <label for="title type">DELETE VALUE</label> 
+          <input id="title type" type="text">
+        </div>
       </div>
     </div>
   </div>
 
   <div class="container">
-    <div class="carview-main"></div>
+    
     <div class="list">
-      <div class="car"></div>
-      <div class="car"></div>
-      <div class="car"></div>
+      <img class="carview-main" src="./images/main-car-crop.png" alt="">
+      <img class="carone" src="./images/leftfacecar-crop.png" alt="">
+      <img class="cartwo" src="./images/sideviewcar-crop.png" alt="">
+      <img class="carthree" src="./images/rearviewcar-crop.png" alt="">
     </div>
 
-    <div class="main-wrapper">
+    <div class="entry-wrapper">
       <div class="info-wrapper">
         <div class="info-entry">
           <h5>C.U.W.A</h5>
-          <input type="number">
+          <input type="text">
         </div>
     
         <div class="info-entry">
           <h5>Repair Cost</h5>
-          <input type="number">
+          <input type="text">
         </div>
     
         <div class="info-entry">
           <h5>Delete Value</h5>
-          <input type="number">
+          <input type="text">
         </div>
     
         <div class="info-entry">
           <h5>Diminished Value</h5>
-          <input type="number">
+          <input type="text">
         </div>
     
         <div class="info-entry">
           <h5>Replacement Cost</h5>
-          <input type="number">
+          <input type="text">
         </div>
     
         <div class="info-entry">
           <h5>Selling / Transport Fee</h5>
-          <input type="number">
+          <input type="text">
         </div>
     
         <div class="info-entry">
           <h5>Projected Damaged Price</h5>
-          <input type="number">
+          <input type="text">
         </div>
       </div>
 
@@ -123,40 +136,40 @@
         <div class="data-entry">
           <h5>Diminished Value</h5>
           <div>
-          <input class="second-entry"  type="number">
-          <input type="number">
+          <input class="second-entry"  type="text">
+          <input type="text">
           </div>
         </div>
     
         <div class="data-entry">
           <h5>Replacement Cost</h5>
           <div>
-          <input class="second-entry"  type="number">
-          <input type="number">
+            <input class="second-entry"  type="text">
+            <input type="text">
           </div>
         </div>
     
         <div class="data-entry">
           <h5>Selling Fees</h5>
           <div>
-          <input class="second-entry"  type="number">
-          <input type="number">
+          <input class="second-entry"  type="text">
+          <input type="text">
           </div>
         </div>
     
         <div class="data-entry">
           <h5>Gain / Loss </h5>
           <div>
-          <input class="second-entry"  type="number">
-          <input type="number">
+          <input class="second-entry"  type="text">
+          <input type="text">
           </div>
         </div>
     
         <div class="data-entry">
           <h5 class="font-weight-bold">TOTAL</h5>
           <div>
-          <input class="second-entry"  type="number">
-          <input type="number">
+          <input class="second-entry"  type="text">
+          <input type="text">
           </div>
         </div>
       </div>

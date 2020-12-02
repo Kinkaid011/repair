@@ -1,5 +1,49 @@
 @import 'base';
 
+header {
+    background-color: lightgray;
+    display: none;
+    height: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    
+    h2 {
+        color: $green;
+        // align-self: center;
+    }
+
+    .logo {
+        width: 175px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+
+nav {
+
+    a {
+        color: white !important;
+        display: inline-block;
+        margin: 0 5px;
+        width: 100px;
+        
+    }
+
+    .active {
+        background-color: $green;
+    }
+}
+
+.vehicle-wrapper {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(345px, 1fr) );
+}
+
 .vehicle-info {
     display: grid;
     grid-template-columns: 1fr;
@@ -7,7 +51,7 @@
     margin: 20px 0 0 0;
 
     input, select {
-        border: 1px solid lightgray;
+        border: 1px solid gray;
         outline: none;
         padding: 0 10px;
         border-radius: .25em;
@@ -45,6 +89,8 @@
 }
 
 .vehicle-eval {
+    max-height: 115px;
+    max-width: 345px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 0.5rem;
@@ -53,12 +99,14 @@
     padding: 10px 15px;
     border-radius: 10px;
     margin: 20px 0;
+    align-items: center;
 
     input {
         border: 1px solid lightgray;
         outline: none;
         padding: 0 10px;
         border-radius: .25em;
+        height: 26px;
     }
 
     .cuwa, .delete-value, .repair-cost {
@@ -71,23 +119,29 @@
     }
 }
 
+.list {
+    display: grid;
+    // height: 500px;
+    grid-template-columns: 1fr;
+    // max-width: 500px;
+    margin: 20px 0; 
+}
+
 
 .carview-main {
-    background-color: orange;
-    height: 300px;
-    width: auto;
-    margin: 20px 0;
+    height: 345px;
+    width: 345px; 
 }
 
-.list {
-    display: flex;
-    justify-content: space-between;  
+
+.carone,.cartwo, .carthree {
+    display: none;
 }
 
-.car {
-    background-color: orange;
-    height: 100px;
-    width: 100px;
+.entry-wrapper {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: .5em;
 }
 
 .info-entry {
@@ -140,6 +194,119 @@
     }
 }
 
-.labels {
-    margin-left: auto;
+
+
+@media (min-width: 768px) {
+
+    header {
+        display: block;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 690px;
+        margin:  20px auto; 
+    }
+
+    .carview-main {
+        height: 300px;
+        width: 500px; 
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 3;
+        align-self: center;
+    }
+
+    .carone, .cartwo, .carthree {
+        display: block;
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+@media (min-width: 992px) {
+
+    nav {
+        height: 28px;
+
+        a {
+            padding: 0 15px !important;
+        }
+    }
+
+    .vehicle-wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+
+    .vehicle-info {
+        display: grid;
+        grid-template-columns: .75fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 0rem;
+        margin: 20px 0 0 0;
+        
+
+        input, select {
+            border: 1px solid gray;
+            outline: none;
+            padding: 0 10px;
+            border-radius: .25em;
+            margin: 0 0 0 10px;
+            width: 74%;
+        }
+    
+        select {
+            width: 74%;
+        }
+
+        .vin {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+
+            input {
+                width: 69%;
+            }
+        }
+
+        .unit {
+            grid-column: 1;
+            grid-row: 2;
+            
+            input {
+                margin: 0 0 0 10px;
+                width: 65%;
+            }
+        }
+
+        .mileage {
+            grid-column: 2;
+            grid-row: 2;
+
+            input {
+                width: 55%;
+            }
+        }
+
+        .location {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+
+        .title-type {
+            grid-column: 1 / span 2;
+            grid-row: 4;
+        }
+    }
+
+    .vehicle-eval {
+        justify-self: end;
+        width: 345px;
+    }
+
+    .entry-wrapper {
+        grid-gap: 2em;
+    }
 }

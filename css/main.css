@@ -1,3 +1,58 @@
+.btn-success {
+  background-color: #007816;
+}
+
+.btn-success {
+  background-color: #007816;
+}
+
+header {
+  background-color: lightgray;
+  display: none;
+  height: 100px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+}
+
+.header h2 {
+  color: #007816;
+}
+
+.header .logo {
+  width: 175px;
+  position: relative;
+  bottom: 10px;
+}
+
+nav a {
+  color: white !important;
+  display: inline-block;
+  margin: 0 5px;
+  width: 100px;
+}
+
+nav .active {
+  background-color: #007816;
+}
+
+.vehicle-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(345px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+}
+
 .vehicle-info {
   display: -ms-grid;
   display: grid;
@@ -8,7 +63,7 @@
 }
 
 .vehicle-info input, .vehicle-info select {
-  border: 1px solid lightgray;
+  border: 1px solid gray;
   outline: none;
   padding: 0 10px;
   border-radius: .25em;
@@ -39,6 +94,8 @@
 }
 
 .vehicle-eval {
+  max-height: 115px;
+  max-width: 345px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -49,6 +106,9 @@
   padding: 10px 15px;
   border-radius: 10px;
   margin: 20px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .vehicle-eval input {
@@ -56,6 +116,7 @@
   outline: none;
   padding: 0 10px;
   border-radius: .25em;
+  height: 26px;
 }
 
 .vehicle-eval .cuwa, .vehicle-eval .delete-value, .vehicle-eval .repair-cost {
@@ -71,26 +132,29 @@
   margin: 0;
 }
 
-.carview-main {
-  background-color: orange;
-  height: 300px;
-  width: auto;
+.list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   margin: 20px 0;
 }
 
-.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.carview-main {
+  height: 345px;
+  width: 345px;
 }
 
-.car {
-  background-color: orange;
-  height: 100px;
-  width: 100px;
+.carone, .cartwo, .carthree {
+  display: none;
+}
+
+.entry-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: .5em;
 }
 
 .info-entry {
@@ -151,6 +215,126 @@
   border-radius: 0;
 }
 
-.labels {
-  margin-left: auto;
+@media (min-width: 768px) {
+  header {
+    display: block;
+  }
+  .list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px 1fr 1fr;
+        grid-template-columns: 200px 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    max-width: 690px;
+    margin: 20px auto;
+  }
+  .carview-main {
+    height: 300px;
+    width: 500px;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / span 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / span 3;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .carone, .cartwo, .carthree {
+    display: block;
+    width: 100%;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    height: 28px;
+  }
+  nav a {
+    padding: 0 15px !important;
+  }
+  .vehicle-wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .vehicle-info {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: .75fr 1fr;
+        grid-template-columns: .75fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0rem;
+    margin: 20px 0 0 0;
+  }
+  .vehicle-info input, .vehicle-info select {
+    border: 1px solid gray;
+    outline: none;
+    padding: 0 10px;
+    border-radius: .25em;
+    margin: 0 0 0 10px;
+    width: 74%;
+  }
+  .vehicle-info select {
+    width: 74%;
+  }
+  .vehicle-info .vin {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .vehicle-info .vin input {
+    width: 69%;
+  }
+  .vehicle-info .unit {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .vehicle-info .unit input {
+    margin: 0 0 0 10px;
+    width: 65%;
+  }
+  .vehicle-info .mileage {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .vehicle-info .mileage input {
+    width: 55%;
+  }
+  .vehicle-info .location {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .vehicle-info .title-type {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .vehicle-eval {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    width: 345px;
+  }
+  .entry-wrapper {
+    grid-gap: 2em;
+  }
 }

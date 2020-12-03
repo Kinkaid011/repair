@@ -125,6 +125,7 @@ nav {
     grid-template-columns: 1fr;
     // max-width: 500px;
     margin: 20px 0; 
+
 }
 
 
@@ -300,6 +301,22 @@ nav {
             grid-column: 1 / span 2;
             grid-row: 4;
         }
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 800px;
+        margin:  20px auto; 
+    }
+
+    .carview-main {
+        height: 300px;
+        width: 600px; 
+        grid-column: 2 / span 2;
+        grid-row: 1 / span 3;
+        align-self: center;
     }
 
     .vehicle-eval {

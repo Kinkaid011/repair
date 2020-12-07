@@ -121,11 +121,8 @@ nav {
 
 .list {
     display: grid;
-    // height: 500px;
     grid-template-columns: 1fr;
-    // max-width: 500px;
     margin: 20px 0; 
-
 }
 
 
@@ -139,6 +136,8 @@ nav {
 .carone,.cartwo, .carthree {
     display: none;
 }
+
+
 
 .entry-wrapper {
     display: grid;
@@ -318,6 +317,11 @@ nav {
         grid-row: 1 / span 3;
         
     }
+
+.switcher-item {
+    max-width: 600px !important;
+    max-height: 300px !important;
+}
 
     .vehicle-eval {
         justify-self: end;

@@ -129,7 +129,7 @@ nav {
 .carview-main {
     height: auto;
     width: 345px; 
-    margin: 20px 0;
+    margin: 0;
 }
 
 
@@ -216,7 +216,7 @@ nav {
         width: 500px; 
         grid-column: 2 / span 2;
         grid-row: 1 / span 3;
-        align-self: center;
+        align-self: flex-start;
     }
 
     .carone, .cartwo, .carthree {
@@ -318,10 +318,10 @@ nav {
         
     }
 
-.switcher-item {
-    max-width: 600px !important;
-    max-height: 300px !important;
-}
+    #switcher-item {
+        width: 600px;
+        height: 375px;
+    }
 
     .vehicle-eval {
         justify-self: end;

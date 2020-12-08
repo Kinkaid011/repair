@@ -143,7 +143,7 @@ nav .active {
 .carview-main {
   height: auto;
   width: 345px;
-  margin: 20px 0;
+  margin: 0;
 }
 
 .carone, .cartwo, .carthree {
@@ -239,9 +239,8 @@ nav .active {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: 1 / span 3;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .carone, .cartwo, .carthree {
     display: block;
@@ -349,9 +348,10 @@ nav .active {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: 1 / span 3;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+  }
+  #switcher-item {
+    width: 600px;
+    height: 375px;
   }
   .vehicle-eval {
     -ms-grid-column-align: end;
